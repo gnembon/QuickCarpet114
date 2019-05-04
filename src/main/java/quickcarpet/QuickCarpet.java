@@ -7,15 +7,18 @@ import net.minecraft.server.command.ServerCommandSource;
 import quickcarpet.commands.*;
 import quickcarpet.helper.TickSpeed;
 import quickcarpet.logging.LoggerRegistry;
+import quickcarpet.network.PluginChannelManager;
 import quickcarpet.utils.HUDController;
 
 public class QuickCarpet implements ModInitializer {
 
     public static MinecraftServer minecraft_server;
+    public static PluginChannelManager pluginChannels;
 
     public static void init(MinecraftServer server) //Constructor of this static single ton class
     {
-        QuickCarpet.minecraft_server = server;
+        minecraft_server = server;
+        pluginChannels = new PluginChannelManager(server);
     }
 
     public static void onServerLoaded(MinecraftServer server) {

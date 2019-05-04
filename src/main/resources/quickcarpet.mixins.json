@@ -22,7 +22,9 @@
     "MixinInfestedBlock",
     "MixinSpawnRestriction",
     "MixinEndCityFeature",
-    "MixinFloatingIslandsChunkGenerator"
+    "MixinFloatingIslandsChunkGenerator",
+    "ICustomPayloadC2SPacket",
+    "MixinServerPlayNetworkHandler"
   ],
   "client": [
     "MixinIntegratedServer",
