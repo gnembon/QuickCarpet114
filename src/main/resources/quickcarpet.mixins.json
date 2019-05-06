@@ -24,7 +24,10 @@
     "MixinEndCityFeature",
     "MixinFloatingIslandsChunkGenerator",
     "ICustomPayloadC2SPacket",
-    "MixinServerPlayNetworkHandler"
+    "MixinServerPlayNetworkHandler",
+    "ICraftingInventory",
+    "MixinCraftingTableBlock",
+    "MixinPistonBlock"
   ],
   "client": [
     "MixinIntegratedServer",

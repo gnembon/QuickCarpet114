@@ -8,6 +8,7 @@ import quickcarpet.commands.*;
 import quickcarpet.helper.TickSpeed;
 import quickcarpet.logging.LoggerRegistry;
 import quickcarpet.network.PluginChannelManager;
+import quickcarpet.utils.CarpetRegistry;
 import quickcarpet.utils.HUDController;
 
 public class QuickCarpet implements ModInitializer {
@@ -32,6 +33,7 @@ public class QuickCarpet implements ModInitializer {
     
     public static void onGameStarted() {
         LoggerRegistry.initLoggers();
+        CarpetRegistry.init();
     }
 
     public static void registerCarpetCommands(CommandDispatcher<ServerCommandSource> dispatcher) {

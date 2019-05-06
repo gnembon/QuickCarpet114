@@ -66,6 +66,7 @@ public class QuickCarpetSettings {
                 rule("explosionNoBlockDamage", "tnt", "Explosions won't destroy blocks"),
                 rule("silverFishDropGravel",  "experimental", "Silverfish drop a gravel item when breaking out of a block"),
                 rule("shulkerSpawningInEndCities", "feature experimental", "Shulkers will respawn in end cities").boolAccelerate(),
+                rule("autoCraftingTable", "feature experimental", "Automatic crafting table"),
         };
         for (CarpetSettingEntry rule : RuleList) {
             settings_store.put(rule.getName(), rule);
