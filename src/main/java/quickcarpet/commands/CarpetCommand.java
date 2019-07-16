@@ -24,6 +24,7 @@ import static net.minecraft.server.command.CommandManager.argument;
 import static net.minecraft.server.command.CommandManager.literal;
 
 public class CarpetCommand {
+    /*
     private static final Set<String> RULE_CATEGORIES = new LinkedHashSet<>();
 
     static {
@@ -226,5 +227,5 @@ public class CarpetCommand {
             Messenger.m(player, categories.toArray(new Object[0]));
         } catch (CommandSyntaxException ignored) {}
         return 1;
-    }
+    }*/
 }

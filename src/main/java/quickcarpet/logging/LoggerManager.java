@@ -12,6 +12,7 @@ import java.util.Map;
 import java.util.stream.Stream;
 
 public class LoggerManager {
+    /*
     private Map<String, PlayerSubscriptions> playerSubscriptions = new HashMap<>();
     private Multimap<Logger, String> subscribedOfflinePlayers = MultimapBuilder.hashKeys().hashSetValues().build();
     private Multimap<Logger, String> subscribedOnlinePlayers = MultimapBuilder.hashKeys().hashSetValues().build();
@@ -39,9 +40,7 @@ public class LoggerManager {
         }
     }
 
-    /**
-     * Subscribes the player with name playerName to the log with name logName.
-     */
+
     public void subscribePlayer(String playerName, String logName, String option, LogHandler handler) {
         subscribePlayer(playerName, Loggers.getLogger(logName), option, handler);
     }
@@ -60,9 +59,7 @@ public class LoggerManager {
         handler.onAddPlayer(playerName);
     }
 
-    /**
-     * Unsubscribes the player with name playerName from the log with name logName.
-     */
+
     public void unsubscribePlayer(String playerName, String logName) {
         unsubscribePlayer(playerName, Loggers.getLogger(logName));
     }
@@ -78,9 +75,7 @@ public class LoggerManager {
         logger.active = hasOnlineSubscribers(logger);
     }
 
-    /**
-     * If the player is not subscribed to the log, then subscribe them. Otherwise, unsubscribe them.
-     */
+
     public boolean togglePlayerSubscription(String playerName, String logName, LogHandler handler) {
         PlayerSubscriptions subs = playerSubscriptions.get(playerName);
         Logger logger = Loggers.getLogger(logName);
@@ -93,9 +88,7 @@ public class LoggerManager {
         }
     }
 
-    /**
-     * Get the set of logs the current player is subscribed to.
-     */
+
     public PlayerSubscriptions getPlayerSubscriptions(String playerName) {
         PlayerSubscriptions subs = playerSubscriptions.get(playerName);
         return subs == null ? new PlayerSubscriptions(playerName) : subs;
@@ -131,10 +124,9 @@ public class LoggerManager {
         }
     }
 
-    /**
-     * Gets the {@code PlayerEntity} instance for a player given their UUID. Returns null if they are offline.
-     */
+
     private static ServerPlayerEntity playerFromName(String name) {
         return QuickCarpet.minecraft_server.getPlayerManager().getPlayer(name);
     }
+    */
 }

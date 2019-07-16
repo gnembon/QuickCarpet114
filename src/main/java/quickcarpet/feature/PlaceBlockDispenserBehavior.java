@@ -54,7 +54,7 @@ public class PlaceBlockDispenserBehavior  extends ItemDispenserBehavior {
 
                 @Override
                 public Direction getPlayerFacing() {
-                    return ffacing.getAxis() == Direction.Axis.Y ? Direction.NORTH : ffacing;
+                    return ffacing.getAxis() == Direction.Axis.field_11052 ? Direction.NORTH : ffacing;
                 }
 
                 @Override
@@ -81,13 +81,13 @@ public class PlaceBlockDispenserBehavior  extends ItemDispenserBehavior {
 
         if (properties.contains(Properties.FACING)) {
             state = state.with(Properties.FACING, facing);
-        } else if (properties.contains(Properties.HORIZONTAL_FACING) && axis != Direction.Axis.Y) {
+        } else if (properties.contains(Properties.HORIZONTAL_FACING) && axis != Direction.Axis.field_11052) {
             state = state.with(Properties.HORIZONTAL_FACING, facing);
-        } else if (properties.contains(Properties.HOPPER_FACING) && axis != Direction.Axis.Y) {
+        } else if (properties.contains(Properties.HOPPER_FACING) && axis != Direction.Axis.field_11052) {
             state = state.with(Properties.HOPPER_FACING, facing);
         } else if (properties.contains(Properties.AXIS)) {
             state = state.with(Properties.AXIS, axis);
-        } else if (properties.contains(Properties.HORIZONTAL_AXIS)  && axis != Direction.Axis.Y) {
+        } else if (properties.contains(Properties.HORIZONTAL_AXIS)  && axis != Direction.Axis.field_11052) {
             state = state.with(Properties.HORIZONTAL_AXIS, axis);
         }
 

@@ -1,5 +1,6 @@
 package quickcarpet.network.channels;
 
+import carpet.CarpetServer;
 import io.netty.buffer.Unpooled;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
@@ -10,7 +11,9 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.PacketByteBuf;
 import quickcarpet.network.PacketSplitter;
 import quickcarpet.network.PluginChannelHandler;
-import quickcarpet.settings.ParsedRule;
+//import quickcarpet.settings.ParsedRule;
+import carpet.settings.ParsedRule;
+
 import quickcarpet.settings.Settings;
 
 import java.util.Collection;
@@ -39,7 +42,7 @@ public class RulesChannel implements PluginChannelHandler {
     @Override
     public boolean register(Identifier channel, ServerPlayerEntity player) {
         players.add(player);
-        sendRuleUpdate(player, Settings.MANAGER.getRules());
+        sendRuleUpdate(player, CarpetServer.settingsManager.getRules());
         return true;
     }
 

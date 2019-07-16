@@ -27,6 +27,7 @@ import static net.minecraft.server.command.CommandManager.argument;
 import static net.minecraft.server.command.CommandManager.literal;
 
 public class SpawnCommand {
+    /*
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher) {
         LiteralArgumentBuilder<ServerCommandSource> builder = literal("spawn")
             .requires((player) -> Settings.commandSpawn)
@@ -99,5 +100,5 @@ public class SpawnCommand {
         }
         Messenger.send(source, lst);
         return 1;
-    }
+    }*/
 }

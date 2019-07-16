@@ -27,6 +27,7 @@ import static net.minecraft.server.command.CommandManager.argument;
 import static net.minecraft.server.command.CommandManager.literal;
 
 public class LogCommand {
+    /*
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher) {
         LiteralArgumentBuilder<ServerCommandSource> log = literal("log")
             .requires((player) -> Settings.commandLog)
@@ -209,5 +210,5 @@ public class LogCommand {
             Messenger.m(source, "gi Subscribed to " + loggerName);
         }
         return 1;
-    }
+    }*/
 }

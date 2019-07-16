@@ -18,6 +18,7 @@ import static quickcarpet.utils.Constants.SetBlockState.NO_FILL_UPDATE;
 @Mixin(Structure.class)
 public abstract class StructureMixin {
 
+    /*
     @Redirect(method = "method_15172", at = @At(value = "INVOKE",
             target = "Lnet/minecraft/world/IWorld;setBlockState(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;I)Z"),
             slice = @Slice(from = @At(value = "INVOKE", target = "Lnet/minecraft/util/Clearable;clear(Ljava/lang/Object;)V"),
@@ -32,5 +33,5 @@ public abstract class StructureMixin {
         if (Settings.fillUpdates) {
             iWorld.updateNeighbors(var1, var2);
         }
-    }
+    }*/
 }

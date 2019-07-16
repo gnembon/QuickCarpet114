@@ -19,6 +19,8 @@ import quickcarpet.utils.IPistonBlockEntity;
 
 @Mixin(PistonBlockEntityRenderer.class)
 public abstract class PistonBlockEntityRendererMixin extends BlockEntityRenderer<PistonBlockEntity> {
+
+    /*
     @Inject(method = "method_3576", at = @At(value = "INVOKE",
             target = "Lnet/minecraft/client/render/block/entity/PistonBlockEntityRenderer;method_3575(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Lnet/minecraft/client/render/BufferBuilder;Lnet/minecraft/world/World;Z)Z",
             ordinal = 3))

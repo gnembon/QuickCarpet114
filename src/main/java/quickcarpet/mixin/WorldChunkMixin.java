@@ -40,7 +40,8 @@ public abstract class WorldChunkMixin implements IWorldChunk {
 
     // Fix Failure: If a moving BlockEntity is placed while BlockEntities are ticking, this will not find it and then replace it with a new TileEntity!
     // blockEntity_2 = this.getBlockEntity(blockPos_1, WorldChunk.CreationType.CHECK);
-    @Redirect(method = "setBlockState", at = @At(value = "INVOKE", ordinal = 1,
+
+    /*@Redirect(method = "setBlockState", at = @At(value = "INVOKE", ordinal = 1,
             target = "Lnet/minecraft/world/chunk/WorldChunk;getBlockEntity(Lnet/minecraft/util/math/BlockPos;" + "Lnet/minecraft/world/chunk/WorldChunk$CreationType;)" + "Lnet/minecraft/block/entity/BlockEntity;"))
     private BlockEntity ifGetBlockEntity(WorldChunk worldChunk, BlockPos blockPos_1,
                                          WorldChunk.CreationType worldChunk$CreationType_1) {
@@ -49,7 +50,7 @@ public abstract class WorldChunkMixin implements IWorldChunk {
         } else {
             return this.world.getBlockEntity(blockPos_1);
         }
-    }
+    }*/
 
 
     /**
@@ -58,6 +59,8 @@ public abstract class WorldChunkMixin implements IWorldChunk {
      *
      * @author 2No2Name
      */
+
+    /*
     @Nullable
     public BlockState setBlockStateWithBlockEntity(BlockPos blockPos_1, BlockState newBlockState, BlockEntity newBlockEntity,
                                                    boolean boolean_1) {
@@ -127,5 +130,5 @@ public abstract class WorldChunkMixin implements IWorldChunk {
                 return oldBlockState;
             }
         }
-    }
+    }*/
 }

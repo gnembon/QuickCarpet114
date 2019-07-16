@@ -49,15 +49,16 @@ public @interface Rule {
     /**
      * The class of the validator checked when the rule is changed.
      */
-    Class<? extends Validator> validator() default Validator.AlwaysTrue.class;
+    //Class<? extends Validator> validator() default Validator.AlwaysTrue.class;
 
     /**
      * The class of the listener called when the rule is changed.
      */
-    Class<? extends ChangeListener> onChange() default ChangeListener.Empty.class;
+    //Class<? extends ChangeListener> onChange() default ChangeListener.Empty.class;
 
     /**
      * List of Minecraft bugs this rule fixes
      */
     BugFix[] bug() default {};
+
 }

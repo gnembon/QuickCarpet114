@@ -16,11 +16,11 @@ import java.util.Random;
 @Mixin(CoralFeature.class)
 public abstract class CoralFeatureMixin implements ICoralFeature
 {
-    @Shadow protected abstract boolean spawnCoral(IWorld var1, Random var2, BlockPos var3, BlockState var4);
+    /*@Shadow protected abstract boolean spawnCoral(IWorld var1, Random var2, BlockPos var3, BlockState var4);
 
     @Override
     public boolean growSpecific(World worldIn, Random random, BlockPos pos, BlockState blockUnder)
     {
         return spawnCoral(worldIn, random, pos, blockUnder);
-    }
+    }*/
 }

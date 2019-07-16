@@ -35,6 +35,7 @@ public abstract class HopperBlockEntityMixin extends LootableContainerBlockEntit
 
     @Shadow public abstract int getInvSize();
 
+    /*
     @Inject(method = "insert", at = @At("HEAD"), cancellable = true)
     private void onInsert(CallbackInfoReturnable<Boolean> cir) {
         if (Settings.hopperCounters) {
@@ -54,6 +55,6 @@ public abstract class HopperBlockEntityMixin extends LootableContainerBlockEntit
                 cir.setReturnValue(true);
             }
         }
-    }
+    }*/
 
 }

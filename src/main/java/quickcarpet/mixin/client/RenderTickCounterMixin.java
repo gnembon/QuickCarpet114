@@ -10,8 +10,9 @@ import quickcarpet.annotation.Feature;
 @Feature("tickSpeed")
 @Mixin(RenderTickCounter.class)
 public class RenderTickCounterMixin {
+    /*
     @Redirect(method = "beginRenderTick", at = @At(value = "FIELD", target = "Lnet/minecraft/client/render/RenderTickCounter;timeScale:F"))
     private float adjustTickSpeed(RenderTickCounter counter) {
         return QuickCarpet.getInstance().client.tickSpeed.msptGoal;
-    }
+    }*/
 }

@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class LogHandlers {
+    /*
     public static final Map<String, LogHandler.LogHandlerCreator> CREATORS = new HashMap<>();
 
     static {
@@ -35,4 +36,5 @@ public class LogHandlers {
     public static List<String> getHandlerNames() {
         return CREATORS.keySet().stream().sorted().collect(Collectors.toList());
     }
+    */
 }

@@ -12,7 +12,7 @@ public class QuickCarpetClient {
     private final MinecraftClient minecraftClient;
     private final ClientRulesChannel rulesChannel;
     private final ClientPubSubListener pubSubListener;
-    public TickSpeed tickSpeed = new TickSpeed(true);
+    //public TickSpeed tickSpeed = new TickSpeed(true);
 
     public QuickCarpetClient() {
         QuickCarpet.getInstance().client = this;
@@ -26,7 +26,7 @@ public class QuickCarpetClient {
     }
 
     public void onJoinServer() {
-        tickSpeed = new TickSpeed(true);
+        //tickSpeed = new TickSpeed(true);
         ClientPluginChannelManager.INSTANCE.sendRegisterPacket(minecraftClient.getNetworkHandler());
         pubSubListener.subscribe(
             "minecraft.performance.tps",
@@ -34,16 +34,16 @@ public class QuickCarpetClient {
             "carpet.tick-rate.paused",
             "carpet.tick-rate.step"
         );
-        if (!isSingleplayer()) {
+        /*if (!isSingleplayer()) {
             for (ParsedRule<?> rule : Settings.MANAGER.getRules()) rule.resetToDefault(false);
-        }
+        }*/
     }
 
     public void onLeaveServer() {
-        tickSpeed = new TickSpeed(true);
+        //tickSpeed = new TickSpeed(true);
     }
 
     public void tick() {
-        tickSpeed.tick(MinecraftClient.getInstance());
+        //tickSpeed.tick(MinecraftClient.getInstance());
     }
 }

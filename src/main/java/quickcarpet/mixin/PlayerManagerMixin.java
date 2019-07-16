@@ -29,6 +29,7 @@ import java.util.UUID;
 public abstract class PlayerManagerMixin {
     @Shadow @Final private MinecraftServer server;
 
+    /*
     @Inject(method = "loadPlayerData", at = @At(value = "RETURN", shift = At.Shift.BEFORE))
     private void fixStartingPos(ServerPlayerEntity player, CallbackInfoReturnable<CompoundTag> cir) {
         if (player instanceof FakeServerPlayerEntity) {
@@ -64,6 +65,6 @@ public abstract class PlayerManagerMixin {
             }
             serverPlayerEntity_3.networkHandler.disconnect(new TranslatableText("multiplayer.disconnect.duplicate_login", new Object[0]));
         }
-    }
+    }*/
 
 }

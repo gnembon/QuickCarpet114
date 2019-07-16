@@ -16,6 +16,6 @@ public abstract class MinecraftDedicatedServerMixin {
     @Inject(method = "setupServer", at = @At(value = "INVOKE", shift = At.Shift.AFTER, target = "Lnet/minecraft/util/UserCache;setUseRemote(Z)V"))
     private void onSetupServerDedicated(CallbackInfoReturnable<Boolean> cir) {
         QuickCarpet.getInstance().onGameStarted(EnvType.SERVER);
-        QuickCarpet.getInstance().onServerLoaded((MinecraftDedicatedServer) (Object) this);
+        //QuickCarpet.getInstance().onServerLoaded((MinecraftDedicatedServer) (Object) this);
     }
 }

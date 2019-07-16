@@ -46,6 +46,7 @@ public abstract class MinecraftServerMixin {
     @Shadow protected abstract void method_16208();
 
     // Called during game start
+    /*
     @Feature("core")
     @Inject(method = "<init>", at = @At(value = "RETURN"))
     private void onMinecraftServerCTOR(File file_1, Proxy proxy_1, DataFixer dataFixer_1,
@@ -86,7 +87,7 @@ public abstract class MinecraftServerMixin {
             }
             //end tick deciding
             //smoothed out delay to include mspt component. With 50L gives defaults.
-            if (behind > /*2000L*/1000L + 20 * mspt && this.timeReference - this.field_4557 >= /*15000L*/10000L + 100 * mspt) {
+            if (behind > /*2000L 1000L + 20 * mspt && this.timeReference - this.field_4557 >= /*15000L 10000L + 100 * mspt) {
                 float ticks = behind / mspt;//50L;
                 LOGGER.warn("Can't keep up! Is the server overloaded? Running {}ms or {} ticks behind", behind, ticks);
                 this.timeReference += ticks * mspt;//50L;
@@ -109,7 +110,7 @@ public abstract class MinecraftServerMixin {
             this.tick(this::shouldKeepTicking);
             this.profiler.swap("nextTickWait");
             this.field_19249 = true;
-            this.field_19248 = Math.max(SystemUtil.getMeasuringTimeMs() + /*50L*/ (long) mspt, this.timeReference);
+            this.field_19248 = Math.max(SystemUtil.getMeasuringTimeMs() + /* 50L (long) mspt, this.timeReference);
             this.method_16208();
             this.profiler.pop();
             this.profiler.endTick();
@@ -172,5 +173,5 @@ public abstract class MinecraftServerMixin {
     private int adjustSpawnChunkCount(int count) {
         int sideLength = Settings.spawnChunkLevel * 2 - 1;
         return sideLength * sideLength;
-    }
+    }*/
 }

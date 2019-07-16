@@ -1,6 +1,8 @@
 package quickcarpet.settings;
 
+import carpet.settings.ParsedRule;
 import net.minecraft.Bootstrap;
+import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.world.ChunkTicketType;
 import net.minecraft.server.world.ServerChunkManager;
 import net.minecraft.server.world.ServerWorld;
@@ -15,38 +17,45 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.Optional;
 
-import static quickcarpet.settings.RuleCategory.*;
+import static carpet.settings.RuleCategory.*;
+
+import carpet.settings.Rule;
+import carpet.settings.Validator;
+import quickcarpet.utils.Messenger;
 
 public class Settings {
-    public static final CoreSettingsManager MANAGER = new CoreSettingsManager(Settings.class);
+    //public static final CoreSettingsManager MANAGER = new CoreSettingsManager(Settings.class);
 
+    /*
     @Rule(desc = "Enables /tick command to control game speed", category = COMMANDS)
     public static boolean commandTick = true;
+    */
 
-    @Rule(desc = "Enables /ping for players to get their ping", category = COMMANDS)
+    @Rule(desc = "Enables /ping for players to get their ping", category = COMMAND)
     public static boolean commandPing = true;
 
     @Rule(
             desc = "Enables /carpetfill command",
             extra = "This is a replica of the /fill command for fillUpdates and fillLimits",
-            category = COMMANDS
+            category = COMMAND
     )
     public static boolean commandCarpetFill = true;
 
     @Rule(
             desc = "Enables /carpetclone command",
             extra = "This is a replica of the /clone command for fillUpdates and fillLimits",
-            category = COMMANDS
+            category = COMMAND
     )
     public static boolean commandCarpetClone = true;
 
     @Rule(
             desc = "Enables /carpetsetblock command",
             extra = "This is a replica of the /setblock command for fillUpdates and fillLimits",
-            category = COMMANDS
+            category = COMMAND
     )
     public static boolean commandCarpetSetBlock = true;
 
+    /*
     @Rule(desc = "Enables /player command to control/spawn players", category = COMMANDS)
     public static boolean commandPlayer = true;
 
@@ -97,18 +106,24 @@ public class Settings {
     @Rule(desc = "Removes random TNT momentum when primed and set to false", category = TNT)
     public static boolean tntPrimeMomentum = true;
 
-    @Rule(desc = "Sets the horizontal random angle on TNT for debugging of TNT contraptions", category = TNT, options = "-1", validator = TNTAngle.class)
+*/
+    @Rule(desc = "Sets the horizontal random angle on TNT for debugging of TNT contraptions", category = CREATIVE, options = "-1", validate = TNTAngle.class)
     public static double tntHardcodeAngle = -1;
 
-    public static class TNTAngle implements Validator<Double> {
+
+
+    public static class TNTAngle extends Validator<Double> {
         @Override
-        public Optional<String> validate(Double value) {
-            if (value == -1) return Optional.empty();
-            if (value >= 0 && value < 360) return Optional.empty();
-            return Optional.of("Must be in the range [0,360) or -1 for default");
+        public Double validate(ServerCommandSource source, ParsedRule<Double> currentRule, Double newValue, String string) {
+            if (newValue == -1) return newValue;
+            if (newValue >= 0 && newValue < 360) return newValue;
+            Messenger.m(source, "r Must be in the range [0,360) or -1 for default");
+            return null;
         }
     }
 
+
+    /*
     @Rule(desc = "Silverfish drop a gravel item when breaking out of a block", category = {FEATURE, EXPERIMENTAL})
     public static boolean silverFishDropGravel = false;
 
@@ -122,6 +137,7 @@ public class Settings {
             category = CREATIVE
     )
     public static boolean portalCreativeDelay = false;
+    */
 
     @Rule(desc = "Fire charges from dispensers convert cobblestone to netherrack", category = {FEATURE, EXPERIMENTAL})
     public static boolean fireChargeConvertsToNetherrack = false;
@@ -129,6 +145,7 @@ public class Settings {
     @Rule(desc = "Automatic crafting table", category = {FEATURE, EXPERIMENTAL})
     public static boolean autoCraftingTable = false;
 
+    /*
     @Rule(desc = "Pistons can push block entities, like hoppers, chests etc.", category = {FEATURE, EXPERIMENTAL})
     public static boolean movableBlockEntities = false;
 
@@ -141,7 +158,7 @@ public class Settings {
 
     @Rule(desc = "Optimizes spawning", category = {OPTIMIZATIONS, EXPERIMENTAL}, bug = @BugFix(value = "MC-151802", fixVersion = "1.14.3-pre1 (partial)"))
     public static boolean optimizedSpawning = false;
-
+*/
     @Rule(desc = "If a living entity dies on sand with fire on top the sand will convert into soul sand", category = {FEATURE, EXPERIMENTAL})
     public static boolean mobInFireConvertsSandToSoulsand = false;
 
@@ -151,17 +168,20 @@ public class Settings {
     @Rule(desc = "Dispensers can place most blocks", category = {EXPERIMENTAL, FEATURE})
     public static PlaceBlockDispenserBehavior.Option dispensersPlaceBlocks = PlaceBlockDispenserBehavior.Option.FALSE;
 
+    /*
     @Rule(desc = "Piston push limit", category = CREATIVE, options = {"10", "12", "14", "100"}, validator = Validator.NonNegative.class)
     public static int pushLimit = 12;
 
     @Rule(desc = "Rail power limit", category = CREATIVE, options = {"9", "15", "30"}, validator = Validator.Positive.class)
     public static int railPowerLimit = 9;
 
+*/
     @Rule(desc = "1.8 double retraction from pistons.", category = EXPERIMENTAL, extra = {
             "Gives pistons the ability to double retract without side effects."
-    }, bug = @BugFix("MC-88959"))
+    })//, bug = @BugFix("MC-88959"))
     public static boolean doubleRetraction = false;
 
+    /*
     @Rule(desc = "Size of spawn chunks", extra = {
             "Like render distance (11 -> 23x23 actively loaded).",
             "Be aware that a border of 11 chunks will stay loaded around that, once those chunks are loaded somehow.",
@@ -189,37 +209,45 @@ public class Settings {
             return Optional.empty();
         }
     }
-
+    */
     @Rule(desc = "Obsidian surrounded by 6 lava sources has a chance of converting to lava", category = {EXPERIMENTAL, FEATURE})
     public static boolean renewableLava = false;
 
+
+    /*
     @Rule(desc = "Players can flip and rotate blocks when holding cactus", category = {CREATIVE, SURVIVAL}, extra = {
             "Doesn't cause block updates when rotated/flipped",
             "Applies to pistons, observers, droppers, repeaters, stairs, glazed terracotta etc..."
     })
+
+
     @CreativeDefault
     @SurvivalDefault
+
+    */
     public static boolean flippinCactus = false;
 
-    @Rule(desc = "Phantoms don't ignore the mobcap.", category = {SURVIVAL, FIX, EXPERIMENTAL})
+    @Rule(desc = "Phantoms don't ignore the mobcap.", category = {SURVIVAL, BUGFIX, EXPERIMENTAL})
     public static boolean phantomsRespectMobcap = false;
 
-    @Rule(desc = "Fixes duping via zombie conversion", category = {FIX, EXPERIMENTAL}, bug = @BugFix(value = "MC-152636", fixVersion = "1.14.4-pre1"))
+    @Rule(desc = "Fixes duping via zombie conversion", category = {BUGFIX, EXPERIMENTAL})// bug = @BugFix(value = "MC-152636", fixVersion = "1.14.4-pre1"))
     @BugFixDefault
     public static boolean conversionDupingFix = false;
-    
+    /*
     @Rule(desc = "Coral structures will grow with bonemeal from coral plants", category = FEATURE)
     public static boolean renewableCoral = false;
-
+*/
     @Rule(desc = "Optimizes random ticks for fluids", extra = {
             "Testing showed around 2-3mspt improvement in regular worlds",
             "Needs reloading of chunks to be effective"
-    }, category = {OPTIMIZATIONS, EXPERIMENTAL})
+    }, category = {OPTIMIZATION, EXPERIMENTAL})
     public static boolean optimizedFluidTicks = false;
 
+    /*
     public static void main(String[] args) throws FileNotFoundException {
         Bootstrap.initialize();
         MANAGER.parse();
         MANAGER.dump(new FileOutputStream(args.length > 0 ? args[0] : "rules.md"));
     }
+    */
 }

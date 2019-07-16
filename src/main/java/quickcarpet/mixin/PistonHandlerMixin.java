@@ -10,8 +10,8 @@ import quickcarpet.settings.Settings;
 @Feature("pushLimit")
 @Mixin(PistonHandler.class)
 public class PistonHandlerMixin {
-    @ModifyConstant(method = "tryMove", constant = @Constant(intValue = 12), expect = 3)
+    /*@ModifyConstant(method = "tryMove", constant = @Constant(intValue = 12), expect = 3)
     private int adjustPushLimit(int pushLimit) {
         return Settings.pushLimit;
-    }
+    }*/
 }

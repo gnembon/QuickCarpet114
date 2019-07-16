@@ -1,5 +1,6 @@
 package quickcarpet.commands;
 
+import carpet.settings.CarpetSettings;
 import com.google.common.collect.Lists;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
@@ -69,9 +70,10 @@ public class CarpetFillCommand {
     }
 
     private static int execute(ServerCommandSource source, MutableIntBoundingBox box, BlockStateArgument state, Mode mode, Predicate<CachedBlockPosition> filter) throws CommandSyntaxException {
+        /*
         int volume = box.getBlockCountX() * box.getBlockCountY() * box.getBlockCountZ();
-        if (volume > Settings.fillLimit) { // [CM] replaces 32768
-            throw TOOBIG_EXCEPTION.create(Settings.fillLimit, volume);
+        if (volume > CarpetSettings.fillLimit) { // [CM] replaces 32768
+            throw TOOBIG_EXCEPTION.create(CarpetSettings.fillLimit, volume);
         } else {
             List<BlockPos> list_1 = Lists.newArrayList();
             ServerWorld world = source.getWorld();
@@ -103,7 +105,8 @@ public class CarpetFillCommand {
 
             source.sendFeedback(new TranslatableText("commands.fill.success", filled), true);
             return filled;
-        }
+        }*/
+        return 1;
     }
     
     enum Mode {

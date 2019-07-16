@@ -3,8 +3,9 @@ package quickcarpet.settings;
 import java.util.Locale;
 
 public enum RuleCategory implements ChangeListener {
-    TNT, FIX, SURVIVAL, CREATIVE, EXPERIMENTAL, OPTIMIZATIONS, FEATURE,
-    COMMANDS {
+
+    //TNT, FIX, SURVIVAL, CREATIVE, EXPERIMENTAL, OPTIMIZATIONS, FEATURE,
+    /*COMMANDS {
         @Override
         public void onChange(ParsedRule rule, Object previous) {
             rule.manager.resendCommandTree();
@@ -18,5 +19,5 @@ public enum RuleCategory implements ChangeListener {
     }
 
     public void onChange(ParsedRule rule, Object previous) {
-    }
+    }*/
 }

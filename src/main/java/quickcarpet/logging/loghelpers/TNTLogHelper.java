@@ -10,12 +10,11 @@ import quickcarpet.utils.Messenger;
 import java.util.LinkedHashMap;
 
 public class TNTLogHelper {
+    /*
     private final TntEntity tnt;
     private final double primedX, primedY, primedZ, primedAngle;
 
-    /**
-     * Runs when the TNT is primed. Expects the position and motion angle of the TNT.
-     */
+
     public TNTLogHelper(TntEntity tnt) {
         this.tnt = tnt;
         primedX = tnt.x;
@@ -31,9 +30,7 @@ public class TNTLogHelper {
         }
     }
 
-    /**
-     * Runs when the TNT explodes. Expects the position of the TNT.
-     */
+
     public void onExploded() {
         double x = tnt.x;
         double y = tnt.y;
@@ -63,5 +60,5 @@ public class TNTLogHelper {
             put("exploded.y", y);
             put("exploded.z", z);
         }
-    }
+    }*/
 }

@@ -3,7 +3,8 @@ package quickcarpet.patches;
 import net.minecraft.network.ClientConnection;
 import net.minecraft.network.NetworkSide;
 
-public class FakeClientConnection extends ClientConnection {
+public class FakeClientConnection { //extends ClientConnection {
+    /*
     public FakeClientConnection(NetworkSide side) {
         super(side);
     }
@@ -13,4 +14,5 @@ public class FakeClientConnection extends ClientConnection {
 
     @Override
     public void handleDisconnection() {}
+    */
 }

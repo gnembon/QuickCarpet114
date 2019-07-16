@@ -3,11 +3,13 @@ package quickcarpet.settings;
 import java.util.Optional;
 
 public interface Validator<T> {
+
     /**
      * Validate the new value of a rule
      * @param value The new value
      * @return empty if valid, error message if invalid
      */
+    /*
     Optional<String> validate(T value);
 
 
@@ -40,5 +42,5 @@ public interface Validator<T> {
             if(value.doubleValue() < 0) return Optional.empty();
             return Optional.of("Must be negative");
         }
-    }
+    }*/
 }

@@ -29,6 +29,7 @@ public abstract class ItemEntityMixin extends Entity {
         super(entityType_1, world_1);
     }
 
+    /*
     @Inject(method = "<init>(Lnet/minecraft/world/World;DDDLnet/minecraft/item/ItemStack;)V", at = @At("RETURN"))
     private void removeEmptyShulkerBoxTags(World worldIn, double x, double y, double z, ItemStack stack, CallbackInfo ci) {
         if (Settings.stackableShulkerBoxes && stack.getItem() instanceof BlockItem && ((BlockItem) stack.getItem()).getBlock() instanceof ShulkerBoxBlock) {
@@ -37,7 +38,9 @@ public abstract class ItemEntityMixin extends Entity {
             }
         }
     }
+    */
 
+    /*
     @Redirect(method = "method_20397", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/ItemStack;getMaxCount()I"))
     private int getItemStackMaxAmount(ItemStack stack) {
         if (Settings.stackableShulkerBoxes && stack.getItem() instanceof BlockItem && ((BlockItem) stack.getItem()).getBlock() instanceof ShulkerBoxBlock)
@@ -45,7 +48,9 @@ public abstract class ItemEntityMixin extends Entity {
 
         return stack.getMaxCount();
     }
+    */
 
+    /*
     @Inject(method = "tryMerge(Lnet/minecraft/entity/ItemEntity;)V", at = @At("HEAD"), cancellable = true)
     private void tryStackShulkerBoxes(ItemEntity other, CallbackInfo ci) {
         ItemEntity self = (ItemEntity) (Object) this;
@@ -72,6 +77,6 @@ public abstract class ItemEntityMixin extends Entity {
             }
             ci.cancel();
         }
-    }
+    }*/
 
 }

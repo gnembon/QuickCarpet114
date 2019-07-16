@@ -19,18 +19,21 @@ import quickcarpet.annotation.Feature;
 public class ServerPlayNetworkHandlerMixin {
     @Shadow public ServerPlayerEntity player;
 
-    @Inject(method = "<init>", at = @At("RETURN"))
+    /*@Inject(method = "<init>", at = @At("RETURN"))
     private void onPlayerConnect(MinecraftServer server, ClientConnection client, ServerPlayerEntity player, CallbackInfo ci) {
         QuickCarpet.getInstance().onPlayerConnect(player);
-    }
+    }*/
 
+    /*
     @Inject(method = "onCustomPayload", at = @At("HEAD"))
     private void processCustomPacket(CustomPayloadC2SPacket packet, CallbackInfo ci) {
         QuickCarpet.getInstance().pluginChannels.process(this.player, packet);
     }
+    */
 
+    /*
     @Inject(method = "onDisconnected", at = @At("HEAD"))
     private void onPlayerDisconnect(Text reason, CallbackInfo ci) {
         QuickCarpet.getInstance().onPlayerDisconnect(this.player);
-    }
+    }*/
 }

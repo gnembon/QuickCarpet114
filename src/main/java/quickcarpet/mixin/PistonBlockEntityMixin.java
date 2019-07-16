@@ -42,6 +42,7 @@ public abstract class PistonBlockEntityMixin extends BlockEntity implements IPis
     /**
      * @author 2No2Name
      */
+    /*
     public BlockEntity getCarriedBlockEntity() {
         return carriedBlockEntity;
     }
@@ -64,10 +65,11 @@ public abstract class PistonBlockEntityMixin extends BlockEntity implements IPis
         renderCarriedBlockEntity = b;
         renderSet = true;
     }
-
+*/
     /**
      * @author 2No2Name
      */
+    /*
     @Redirect(method = "tick", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/World;setBlockState(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;I)Z"))
     private boolean movableTEsetBlockState0(World world, BlockPos blockPos_1, BlockState blockAState_2, int int_1) {
         if (!Settings.movableBlockEntities)
@@ -142,4 +144,5 @@ public abstract class PistonBlockEntityMixin extends BlockEntity implements IPis
     private void setActualProgress(CallbackInfo ci) {
         this.actualProgress = this.progress;
     }
+    */
 }

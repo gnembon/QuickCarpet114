@@ -15,8 +15,8 @@ import quickcarpet.utils.ActionPackOwner;
 
 @Feature("actionPack")
 @Mixin(ServerPlayerEntity.class)
-public abstract class ServerPlayerEntityMixin implements ActionPackOwner {
-    private PlayerActionPack actionPack;
+public abstract class ServerPlayerEntityMixin { //implements ActionPackOwner {
+    /*private PlayerActionPack actionPack;
 
     public PlayerActionPack getActionPack() {
         return actionPack;
@@ -30,5 +30,5 @@ public abstract class ServerPlayerEntityMixin implements ActionPackOwner {
     @Inject(method = "tick", at = @At(value = "HEAD"))
     private void onTick(CallbackInfo ci) {
         actionPack.onUpdate();
-    }
+    }*/
 }

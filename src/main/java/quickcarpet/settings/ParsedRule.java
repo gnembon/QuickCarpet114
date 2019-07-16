@@ -20,7 +20,8 @@ import java.util.function.Supplier;
 
 import static java.lang.reflect.Modifier.*;
 
-public final class ParsedRule<T> implements Comparable<ParsedRule> {
+public final class ParsedRule<T> {//implements Comparable<ParsedRule> {
+    /*
     public final Rule rule;
     public final Field field;
 
@@ -262,5 +263,5 @@ public final class ParsedRule<T> implements Comparable<ParsedRule> {
         };
         TypeAdapter<Integer> INTEGER = new Simple<>(Integer::parseInt, IntegerArgumentType::integer);
         TypeAdapter<Double> DOUBLE = new Simple<>(Double::parseDouble, DoubleArgumentType::doubleArg);
-    }
+    }*/
 }

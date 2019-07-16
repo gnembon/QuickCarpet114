@@ -6,7 +6,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.function.Supplier;
 
-public class LogParameter<T> implements Map.Entry<String, T> {
+public class LogParameter {//<T> implements Map.Entry<String, T> {
+    /*
     private final String key;
     private final Supplier<T> supplier;
 
@@ -33,5 +34,5 @@ public class LogParameter<T> implements Map.Entry<String, T> {
     @SafeVarargs
     public static <T> Set<Map.Entry<String, T>> parameters(Map.Entry<String, T>... params) {
         return new LinkedHashSet<>(Arrays.asList(params));
-    }
+    }*/
 }

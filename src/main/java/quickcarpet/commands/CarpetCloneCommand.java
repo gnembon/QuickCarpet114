@@ -76,6 +76,8 @@ public class CarpetCloneCommand {
     }
 
     private static int execute(ServerCommandSource source, BlockPos begin, BlockPos end, BlockPos destination, Predicate<CachedBlockPosition> filter, Mode mode) throws CommandSyntaxException {
+        return 1;
+        /*
         MutableIntBoundingBox sourceBox = new MutableIntBoundingBox(begin, end);
         BlockPos destinationEnd = destination.add(sourceBox.getSize());
         MutableIntBoundingBox destinationBox = new MutableIntBoundingBox(destination, destinationEnd);
@@ -180,7 +182,7 @@ public class CarpetCloneCommand {
                     throw BlockPosArgumentType.UNLOADED_EXCEPTION.create();
                 }
             }
-        }
+        }*/
     }
     
     enum Mode {

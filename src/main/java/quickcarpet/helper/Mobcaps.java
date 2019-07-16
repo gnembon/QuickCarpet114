@@ -13,6 +13,7 @@ import quickcarpet.mixin.ServerChunkManagerAccessor;
 import java.util.*;
 
 public class Mobcaps {
+    /*
     public static Map<EntityCategory, Pair<Integer, Integer>> getMobcaps(DimensionType dimensionType) {
         return getMobcaps(QuickCarpet.minecraft_server.getWorld(dimensionType));
     }
@@ -48,5 +49,5 @@ public class Mobcaps {
             }
             return entries;
         }
-    }
+    }*/
 }

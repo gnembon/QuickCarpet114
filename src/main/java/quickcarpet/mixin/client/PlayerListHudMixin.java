@@ -10,10 +10,11 @@ import quickcarpet.utils.IPlayerListHud;
 @Feature("logger.hud")
 @Mixin(PlayerListHud.class)
 public abstract class PlayerListHudMixin implements IPlayerListHud {
+    /*
     @Shadow private Text footer;
     @Shadow private Text header;
 
     public boolean hasFooterOrHeader() {
         return footer != null || header != null;
-    }
+    }*/
 }

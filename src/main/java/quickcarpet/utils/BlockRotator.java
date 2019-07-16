@@ -14,6 +14,7 @@ import static quickcarpet.utils.Constants.SetBlockState.NO_FILL_UPDATE;
 import static quickcarpet.utils.Constants.SetBlockState.SEND_TO_CLIENT;
 
 public final class BlockRotator {
+    /*
     private BlockRotator() {}
 
     public static boolean flipBlock(ItemUsageContext usageContext) {
@@ -57,5 +58,5 @@ public final class BlockRotator {
             return true;
         }
         return false;
-    }
+    }*/
 }

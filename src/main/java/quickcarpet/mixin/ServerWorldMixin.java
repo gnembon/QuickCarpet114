@@ -38,6 +38,7 @@ public abstract class ServerWorldMixin extends World {
         super(levelProperties_1, dimensionType_1, biFunction_1, profiler_1, boolean_1);
     }
 
+    /*
     @Feature("profiler")
     @Redirect(
             method = "tick",
@@ -114,6 +115,7 @@ public abstract class ServerWorldMixin extends World {
             ci.cancel();
         }
     }
+    */
 
     @Feature("optimizedFluidTicks")
     @Redirect(method = "tickChunk", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/chunk/ChunkSection;getFluidState(III)Lnet/minecraft/fluid/FluidState;"), require = 0)

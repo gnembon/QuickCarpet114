@@ -13,6 +13,7 @@ import quickcarpet.utils.Messenger;
 import static net.minecraft.server.command.CommandManager.literal;
 
 public class CounterCommand {
+    /*
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher) {
         LiteralArgumentBuilder<ServerCommandSource> counter = literal("counter")
                 .requires((player) -> Settings.hopperCounters)
@@ -56,5 +57,5 @@ public class CounterCommand {
             source.sendFeedback(message, false);
         }
         return 1;
-    }
+    }*/
 }

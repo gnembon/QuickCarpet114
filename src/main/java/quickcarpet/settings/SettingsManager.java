@@ -15,6 +15,7 @@ import java.util.Map;
 import java.util.function.Predicate;
 
 public abstract class SettingsManager {
+    /*
     protected static final Logger LOG = LogManager.getLogger();
     protected final Class<?> settingsClass;
     MinecraftServer server;
@@ -96,5 +97,5 @@ public abstract class SettingsManager {
 
     public Collection<ParsedRule<?>> getSavedRules() {
         return getRulesMatching(ParsedRule::hasSavedValue);
-    }
+    }*/
 }

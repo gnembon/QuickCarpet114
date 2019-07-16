@@ -17,6 +17,13 @@ import quickcarpet.client.ClientPluginChannelManager;
 @Feature("core")
 @Mixin(ClientPlayNetworkHandler.class)
 public abstract class ClientPlayNetworkHandlerMixin implements ClientPlayPacketListener {
+    /*
+
+
+    Temorarily till stuff is clean
+
+
+
     @Inject(method = "onGameJoin", at = @At("RETURN"))
     private void onJoinServer(CallbackInfo ci) {
         QuickCarpet.getInstance().client.onJoinServer();
@@ -44,5 +51,5 @@ public abstract class ClientPlayNetworkHandlerMixin implements ClientPlayPacketL
         if (ClientPluginChannelManager.INSTANCE.process(packet, (ClientPlayNetworkHandler) (Object) this)) {
             info.cancel();
         }
-    }
+    }*/
 }

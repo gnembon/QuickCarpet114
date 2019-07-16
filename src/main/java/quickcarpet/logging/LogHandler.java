@@ -12,6 +12,7 @@ import java.util.function.Supplier;
 
 public interface LogHandler
 {
+    /*
 
     LogHandler CHAT = (logger, player, message, commandParams) -> Arrays.stream(message)
             .forEach(m -> player.sendChatMessage(new TranslatableText("chat.type.announcement", logger.getDisplayName(), m), MessageType.CHAT));
@@ -45,5 +46,5 @@ public interface LogHandler
     default void onAddPlayer(String playerName) {}
 
     default void onRemovePlayer(String playerName) {}
-
+*/
 }

@@ -11,6 +11,7 @@ import quickcarpet.utils.CarpetProfiler;
 import java.util.*;
 
 public final class Loggers {
+    /*
     // Map from logger names to loggers.
     private static Map<String, Logger> LOGGERS = new HashMap<>();
 
@@ -43,16 +44,12 @@ public final class Loggers {
         return logger;
     }
 
-    /**
-     * Gets the logger with the given name. Returns null if no such logger exists.
-     */
+
     public static Logger getLogger(String name) {
         return LOGGERS.get(name);
     }
 
-    /**
-     * Gets the set of logger names.
-     */
+
     public static Set<String> getLoggerNames() {
         return LOGGERS.keySet();
     }
@@ -60,4 +57,5 @@ public final class Loggers {
     public static Collection<Logger> values() {
         return LOGGERS.values();
     }
+    */
 }

@@ -11,6 +11,7 @@ import quickcarpet.annotation.Feature;
 @Mixin(SpawnRestriction.class)
 public abstract class SpawnRestrictionMixin {
 
+    /*
     @Feature("shulkerSpawningInEndCities")
     @Inject(method = "getLocation", at = @At("HEAD"), cancellable = true)
     private static void shulkerOnGround(EntityType<?> type, CallbackInfoReturnable<SpawnRestriction.Location> cir) {
@@ -18,5 +19,5 @@ public abstract class SpawnRestrictionMixin {
             cir.setReturnValue(SpawnRestriction.Location.ON_GROUND);
             cir.cancel();
         }
-    }
+    }*/
 }

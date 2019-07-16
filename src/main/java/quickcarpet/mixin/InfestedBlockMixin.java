@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import quickcarpet.annotation.Feature;
 
-import static quickcarpet.settings.Settings.silverFishDropGravel;
+//import static quickcarpet.settings.Settings.silverFishDropGravel;
 
 @Feature("silverFishDropGravel")
 @Mixin(InfestedBlock.class)
@@ -21,6 +21,7 @@ public abstract class InfestedBlockMixin extends Block {
     public InfestedBlockMixin(Settings block$Settings_1) {
         super(block$Settings_1);
     }
+    /*
 
     @Inject(method = "onStacksDropped", at = @At(value = "INVOKE", shift = At.Shift.AFTER,
             target = "Lnet/minecraft/entity/mob/SilverfishEntity;playSpawnEffects()V"))
@@ -29,5 +30,5 @@ public abstract class InfestedBlockMixin extends Block {
         if (silverFishDropGravel) {
             dropStack(world_1, blockPos_1, new ItemStack(Blocks.GRAVEL));
         }
-    }
+    }*/
 }

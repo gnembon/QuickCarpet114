@@ -46,6 +46,7 @@ import static net.minecraft.server.command.CommandManager.argument;
 import static net.minecraft.server.command.CommandManager.literal;
 
 public class PlayerCommand {
+    /*
     // TODO: allow any order like execute
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher) {
         LiteralArgumentBuilder<ServerCommandSource> literalargumentbuilder = literal("player")
@@ -244,5 +245,5 @@ public class PlayerCommand {
         }
         FakeServerPlayerEntity.createShadow(player.server, player);
         return 1;
-    }
+    }*/
 }

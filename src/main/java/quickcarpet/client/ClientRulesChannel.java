@@ -1,5 +1,7 @@
 package quickcarpet.client;
 
+import carpet.CarpetServer;
+import carpet.settings.ParsedRule;
 import net.minecraft.client.network.packet.CustomPayloadS2CPacket;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
@@ -11,7 +13,7 @@ import quickcarpet.helper.NBTHelper;
 import quickcarpet.network.ClientPluginChannelHandler;
 import quickcarpet.network.PacketSplitter;
 import quickcarpet.network.channels.RulesChannel;
-import quickcarpet.settings.ParsedRule;
+//import quickcarpet.settings.ParsedRule;
 import quickcarpet.settings.Settings;
 
 public class ClientRulesChannel implements ClientPluginChannelHandler {
@@ -35,8 +37,8 @@ public class ClientRulesChannel implements ClientPluginChannelHandler {
                 CompoundTag ruleTag = (CompoundTag) tag;
                 String id = ruleTag.getString("Id");
                 try {
-                    ParsedRule rule = Settings.MANAGER.getRule(id);
-                    rule.set(ruleTag.getString("Value"), false);
+                    ParsedRule<?> rule = CarpetServer.settingsManager.getRule(id);
+                    rule.set(CarpetServer.minecraft_server.getCommandSource(), ruleTag.getString("Value"));//, false);
                 } catch (IllegalArgumentException ignored) {}
             }
         }

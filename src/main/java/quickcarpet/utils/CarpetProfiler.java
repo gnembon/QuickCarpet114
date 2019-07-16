@@ -28,6 +28,7 @@ import java.util.*;
 
 public class CarpetProfiler
 {
+    /*
     private static final Map<DimensionType, Measurement> MEASUREMENTS = new HashMap<>();
     private static int ticksTotal = 0;
     private static int ticksRemaining = 0;
@@ -347,5 +348,5 @@ public class CarpetProfiler
                 m.gc(gcInfo.getDuration());
             }
         }
-    }
+    }*/
 }

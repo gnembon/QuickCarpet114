@@ -35,7 +35,7 @@ public abstract class BlockEntityRenderDispatcherMixin implements IBlockEntityRe
      * @author 2No2Name
      */
     //Renders the BlockEntity offset by the amount specified in the arguments xOffset yOffset zOffset (the moving block moved in the animation by this)
-    public void renderBlockEntityOffset(BlockEntity blockEntity_1, float partialTicks, int destroyStage, double xOffset,
+    /*public void renderBlockEntityOffset(BlockEntity blockEntity_1, float partialTicks, int destroyStage, double xOffset,
             double yOffset, double zOffset) {
         if (blockEntity_1.getSquaredDistance(this.cameraEntity.getPos().x - xOffset, this.cameraEntity.getPos().y - yOffset,
                 this.cameraEntity.getPos().z - zOffset) < blockEntity_1.getSquaredRenderDistance()) {
@@ -48,5 +48,5 @@ public abstract class BlockEntityRenderDispatcherMixin implements IBlockEntityRe
             BlockPos blockpos = blockEntity_1.getPos();
             this.renderEntity(blockEntity_1, (double) blockpos.getX() - renderOffsetX + xOffset, (double) blockpos.getY() - renderOffsetY + yOffset, (double) blockpos.getZ() - renderOffsetZ + zOffset, partialTicks, destroyStage, false);
         }
-    }
+    }*/
 }

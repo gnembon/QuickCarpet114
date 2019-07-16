@@ -50,13 +50,15 @@ public abstract class WorldMixin implements IWorld, SpawnEntityCache {
 
     @Shadow public abstract BlockState getBlockState(BlockPos blockPos_1);
 
-    @Feature("fillUpdates")
+    /*@Feature("fillUpdates")
     @ModifyConstant(method = "setBlockState(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;I)Z",
             constant = @Constant(intValue = NO_OBSERVER_UPDATE))
     private int addFillUpdatesInt(int original) {
         return NO_OBSERVER_UPDATE | NO_FILL_UPDATE;
     }
+    */
 
+    /*
     @Feature("profiler")
     @Inject(method = "tickBlockEntities", at = @At("HEAD"))
     private void startBlockEntities(CallbackInfo ci) {
@@ -119,10 +121,11 @@ public abstract class WorldMixin implements IWorld, SpawnEntityCache {
     public <T extends Entity> void setCachedEntity(EntityType<T> type, T entity) {
         CACHED_ENTITIES.put(type, entity);
     }
-
+*/
     /**
      * @author 2No2Name
      */
+    /*
     @Feature("movableBlockEntities")
     public boolean setBlockStateWithBlockEntity(BlockPos blockPos_1, BlockState blockState_1, BlockEntity newBlockEntity, int int_1) {
         if (World.isHeightInvalid(blockPos_1)) {
@@ -178,5 +181,5 @@ public abstract class WorldMixin implements IWorld, SpawnEntityCache {
                 return true;
             }
         }
-    }
+    }*/
 }

@@ -18,6 +18,7 @@ import quickcarpet.utils.Messenger;
 import java.util.*;
 
 public class TickSpeed {
+    /*
     public final boolean isClient;
     public float tickRateGoal = 20;
     public float msptGoal = 50;
@@ -308,5 +309,5 @@ public class TickSpeed {
                     new LogParameter<>("MSPT", TickSpeed.this::getCurrentMSPT),
                     new LogParameter<>("TPS", TickSpeed.this::getTPS));
         }
-    }
+    }*/
 }

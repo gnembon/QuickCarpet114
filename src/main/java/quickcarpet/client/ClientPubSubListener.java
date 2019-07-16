@@ -36,11 +36,11 @@ public class ClientPubSubListener implements ClientPluginChannelHandler {
         int type = buf.readVarInt();
         if (type == PACKET_S2C_UPDATE) {
             Map<String, Object> updates = parseUpdatePacket(buf);
-            if (!onUpdate(updates, "minecraft.performance.tps", Number.class, tps -> client.tickSpeed.setTickRateGoal(tps.floatValue()))) {
-                onUpdate(updates, "carpet.tick-rate.tps-goal", Number.class, goal -> client.tickSpeed.setTickRateGoal(goal.floatValue()));
-            }
-            onUpdate(updates, "carpet.tick-rate.paused", Boolean.class, paused -> client.tickSpeed.setPaused(paused));
-            onUpdate(updates, "carpet.tick-rate.step", Number.class, step -> client.tickSpeed.setStepAmount(step.intValue()));
+            //if (!onUpdate(updates, "minecraft.performance.tps", Number.class, tps -> client.tickSpeed.setTickRateGoal(tps.floatValue()))) {
+            //    onUpdate(updates, "carpet.tick-rate.tps-goal", Number.class, goal -> client.tickSpeed.setTickRateGoal(goal.floatValue()));
+           // }
+            //onUpdate(updates, "carpet.tick-rate.paused", Boolean.class, paused -> client.tickSpeed.setPaused(paused));
+            //onUpdate(updates, "carpet.tick-rate.step", Number.class, step -> client.tickSpeed.setStepAmount(step.intValue()));
         }
     }
 

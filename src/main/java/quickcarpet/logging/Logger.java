@@ -14,8 +14,8 @@ import java.util.Map;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
 
-public class Logger<T extends Logger.CommandParameters> implements Comparable<Logger<?>> {
-    boolean active = false;
+public class Logger { // <T extends Logger.CommandParameters> implements Comparable<Logger<?>> {
+    /*boolean active = false;
 
     private final String name;
     private final Text displayName;
@@ -57,10 +57,7 @@ public class Logger<T extends Logger.CommandParameters> implements Comparable<Lo
         return displayName;
     }
 
-    /**
-     * serves messages to players fetching them from the promise
-     * will repeat invocation for players that share the same option
-     */
+
     @FunctionalInterface
     public interface MessageSupplier {
         Text[] get(String playerOption, PlayerEntity player);
@@ -76,10 +73,7 @@ public class Logger<T extends Logger.CommandParameters> implements Comparable<Lo
         });
     }
 
-    /**
-     * guarantees that each message for each option will be evaluated once from the promise
-     * and served the same way to all other players subscribed to the same option
-     */
+
     @FunctionalInterface
     public interface PlayerIndependentMessageSupplier extends MessageSupplier {
         Text[] get(String playerOption);
@@ -136,5 +130,5 @@ public class Logger<T extends Logger.CommandParameters> implements Comparable<Lo
         public static final EmptyCommandParameters INSTANCE = new EmptyCommandParameters();
         public static final Supplier<EmptyCommandParameters> SUPPLIER = () -> INSTANCE;
         private EmptyCommandParameters() {}
-    }
+    }*/
 }

@@ -18,9 +18,10 @@ public abstract class InGameHudMixin
     @Shadow @Final private MinecraftClient client;
 
     @Shadow @Final private PlayerListHud playerListHud;
-
+/*
     @Redirect(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/MinecraftClient;isInSingleplayer()Z"))
     private boolean onDraw(MinecraftClient minecraftClient) {
         return this.client.isInSingleplayer() && !((IPlayerListHud) playerListHud).hasFooterOrHeader();
     }
+    */
 }

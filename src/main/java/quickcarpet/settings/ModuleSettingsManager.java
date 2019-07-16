@@ -5,6 +5,7 @@ import quickcarpet.module.QuickCarpetModule;
 import java.lang.reflect.Field;
 
 public class ModuleSettingsManager extends SettingsManager {
+    /*
     public final QuickCarpetModule module;
     public final String prefix;
 
@@ -17,5 +18,5 @@ public class ModuleSettingsManager extends SettingsManager {
     @Override
     public String getRuleName(Field field, Rule rule) {
         return this.prefix + super.getRuleName(field, rule);
-    }
+    }*/
 }

@@ -14,6 +14,7 @@ import quickcarpet.logging.loghelpers.PacketCounter;
 
 @Mixin(ClientConnection.class)
 public class ClientConnectionMixin {
+    /*
     @Feature("packetCounter")
     @Inject(method = "sendImmediately", at = @At("HEAD"))
     private void countPacketOut(Packet<?> packet_1, GenericFutureListener<? extends Future<? super Void>> genericFutureListener_1, CallbackInfo ci) {
@@ -25,4 +26,5 @@ public class ClientConnectionMixin {
     private void countPacketIn(ChannelHandlerContext channelHandlerContext_1, Packet<?> packet_1, CallbackInfo ci) {
         PacketCounter.totalIn++;
     }
+    */
 }

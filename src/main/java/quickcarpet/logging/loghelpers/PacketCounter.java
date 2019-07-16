@@ -6,6 +6,7 @@ import java.util.AbstractMap;
 import java.util.Set;
 
 public class PacketCounter {
+    /*
     public static long totalOut = 0;
     public static long totalIn = 0;
     private static long previousOut = 0;
@@ -27,5 +28,5 @@ public class PacketCounter {
                     new LogParameter<>("in", () -> previousIn),
                     new LogParameter<>("out", () -> previousOut));
         }
-    }
+    }*/
 }

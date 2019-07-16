@@ -20,6 +20,7 @@ import java.util.stream.Collectors;
 
 public class HopperCounter
 {
+    /*
     public static final Map<DyeColor, HopperCounter> COUNTERS;
 
     static {
@@ -137,5 +138,5 @@ public class HopperCounter
             }
             return counts.entrySet();
         }
-    }
+    }*/
 }

@@ -22,6 +22,7 @@ import java.util.*;
 import java.util.function.Consumer;
 
 public class HUDController {
+    /*
     public static final Map<PlayerEntity, List<Text>> PLAYER_HUDS = new WeakHashMap<>();
 
     private static final Map<Logger<?>, Consumer<Logger<?>>> HUD_LOGGERS = new LinkedHashMap<>();
@@ -122,5 +123,5 @@ public class HUDController {
         for (Map.Entry<PlayerEntity, List<Text>> playerHud : PLAYER_HUDS.entrySet()) {
             sendHUD(playerHud.getKey(), new LiteralText(""), Messenger.c(playerHud.getValue().toArray(new Object[0])));
         }
-    }
+    }*/
 }

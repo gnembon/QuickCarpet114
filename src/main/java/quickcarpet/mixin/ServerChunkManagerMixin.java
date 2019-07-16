@@ -20,6 +20,7 @@ public abstract class ServerChunkManagerMixin {
 
     @Shadow @Final private ChunkTicketManager ticketManager;
 
+    /*
     @Feature("spawnTracker")
     @Redirect(
         method = {"tickChunks", "method_20801"},
@@ -33,5 +34,5 @@ public abstract class ServerChunkManagerMixin {
         int mobsPresent = mobcaps.getInt(key);
         SpawnTracker.registerMobcapStatus(this.world.getDimension().getType(), category, mobsPresent > cap);
         return mobsPresent;
-    }
+    }*/
 }

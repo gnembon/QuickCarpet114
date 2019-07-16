@@ -29,6 +29,7 @@ import quickcarpet.utils.SpawnTracker;
 @Mixin(SpawnHelper.class)
 public class SpawnHelperMixin {
 
+    /*
     @Feature("spawnTracker")
     @Redirect(
             method = "spawnEntitiesInChunk",
@@ -108,4 +109,5 @@ public class SpawnHelperMixin {
     private static void endSpawning(EntityCategory category, World world, WorldChunk chunk, BlockPos spawnPoint, CallbackInfo ci) {
         CarpetProfiler.endSection(world);
     }
+    */
 }

@@ -20,6 +20,7 @@ import java.util.Random;
 @Interface(iface = Fertilizable.class, prefix = "fert$")
 public abstract class CoralBlockMixin implements Fertilizable
 {
+    /*
     public boolean isFertilizable(BlockView var1, BlockPos var2, BlockState var3, boolean var4)
     {
         return Settings.renewableCoral && var3.get(CoralParentBlock.WATERLOGGED) && var1.getFluidState(var2.up()).matches(FluidTags.WATER);
@@ -69,5 +70,5 @@ public abstract class CoralBlockMixin implements Fertilizable
                 }
             }
         }
-    }
+    }*/
 }

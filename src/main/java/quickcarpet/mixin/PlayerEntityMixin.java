@@ -16,6 +16,7 @@ public abstract class PlayerEntityMixin {
 
     @Shadow public abstract Iterable<ItemStack> getItemsHand();
 
+    /*
     @Feature("portalCreativeDelay")
     @Inject(method = "getMaxPortalTime", at = @At("HEAD"), cancellable = true)
     private void portalCreativeDelay(CallbackInfoReturnable<Integer> cir) {
@@ -26,5 +27,5 @@ public abstract class PlayerEntityMixin {
         }
         cir.setReturnValue(delay);
         cir.cancel();
-    }
+    }*/
 }

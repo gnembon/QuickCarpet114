@@ -41,6 +41,7 @@ public class PistonBlockMixin extends FacingBlock {
         }
     }
 
+    /*
     @Inject(method = "isMovable", at = @At(value = "RETURN", ordinal = 3, shift = At.Shift.BEFORE))
     private static void movableCMD(BlockState blockState_1, World world_1, BlockPos blockPos_1,
                                    Direction direction_1, boolean boolean_1, Direction direction_2, CallbackInfoReturnable<Boolean> cir) {
@@ -124,5 +125,5 @@ public class PistonBlockMixin extends FacingBlock {
         if (quickcarpet.settings.Settings.doubleRetraction) {
             world.setBlockState(pos, state.with(PistonBlock.EXTENDED, false), 2);
         }
-    }
+    }*/
 }

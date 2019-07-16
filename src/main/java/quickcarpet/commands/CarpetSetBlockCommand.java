@@ -26,6 +26,7 @@ import static quickcarpet.utils.Constants.SetBlockState.NO_FILL_UPDATE;
 import static quickcarpet.utils.Constants.SetBlockState.SEND_TO_CLIENT;
 
 public class CarpetSetBlockCommand {
+    /*
     private static final SimpleCommandExceptionType FAILED_EXCEPTION = new SimpleCommandExceptionType(new TranslatableText("commands.setblock.failed"));
 
     public static void register(CommandDispatcher<ServerCommandSource> commandDispatcher_1) {
@@ -65,5 +66,5 @@ public class CarpetSetBlockCommand {
     enum Mode {
         REPLACE,
         DESTROY
-    }
+    }*/
 }

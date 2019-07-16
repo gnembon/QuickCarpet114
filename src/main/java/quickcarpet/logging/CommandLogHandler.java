@@ -6,7 +6,8 @@ import net.minecraft.text.Text;
 import java.util.Map;
 import java.util.function.Supplier;
 
-public class CommandLogHandler implements LogHandler {
+public class CommandLogHandler {//implements LogHandler {
+    /*
     public final String command;
 
     public CommandLogHandler(String... args) {
@@ -24,5 +25,5 @@ public class CommandLogHandler implements LogHandler {
         }
         if (command.contains("$$")) command = command.replace("$$", params.keySet().toString());
         player.server.getCommandManager().execute(player.getCommandSource(), command);
-    }
+    }*/
 }

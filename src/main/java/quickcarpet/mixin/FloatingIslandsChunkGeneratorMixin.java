@@ -21,6 +21,7 @@ public abstract class FloatingIslandsChunkGeneratorMixin extends SurfaceChunkGen
         super(iWorld_1, biomeSource_1, int_1, int_2, int_3, chunkGeneratorConfig_1, boolean_1);
     }
 
+    /*
     @Override
     public List<Biome.SpawnEntry> getEntitySpawnList(EntityCategory entityCategory_1, BlockPos blockPos_1) {
         if (Settings.shulkerSpawningInEndCities && EntityCategory.MONSTER == entityCategory_1) {
@@ -29,5 +30,5 @@ public abstract class FloatingIslandsChunkGeneratorMixin extends SurfaceChunkGen
             }
         }
         return this.world.getBiome(blockPos_1).getEntitySpawnList(entityCategory_1);
-    }
+    }*/
 }

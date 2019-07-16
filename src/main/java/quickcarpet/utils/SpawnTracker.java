@@ -19,6 +19,7 @@ import java.util.WeakHashMap;
 import java.util.stream.Stream;
 
 public class SpawnTracker {
+    /*
     private static final Map<ServerPlayerEntity, SpawnTracker> TRACKERS = new WeakHashMap<>();
     private final ServerPlayerEntity source;
     private final Box bbox;
@@ -180,5 +181,5 @@ public class SpawnTracker {
             return idA.compareTo(idB);
         }
         return categoryA.compareTo(categoryB);
-    }
+    }*/
 }

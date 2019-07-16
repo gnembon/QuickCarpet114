@@ -11,7 +11,9 @@ import java.io.*;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class CoreSettingsManager extends SettingsManager {
+
+public class CoreSettingsManager { //extends SettingsManager {
+    /*
     private Map<QuickCarpetModule, ModuleSettingsManager> moduleSettings = new HashMap<>();
     private List<ParsedRule<?>> allRules = new ArrayList<>();
     private Map<String, ParsedRule<?>> rulesByName = new HashMap<>();
@@ -143,5 +145,5 @@ public class CoreSettingsManager extends SettingsManager {
             }
             ps.println();
         }
-    }
+    }*/
 }

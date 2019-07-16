@@ -7,7 +7,8 @@ import net.minecraft.server.network.ServerPlayNetworkHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 
-public class FakeServerPlayNetworkHandler extends ServerPlayNetworkHandler {
+public class FakeServerPlayNetworkHandler {//extends ServerPlayNetworkHandler {
+    /*
     public FakeServerPlayNetworkHandler(MinecraftServer server, ClientConnection cc, ServerPlayerEntity playerIn) {
         super(server, cc, playerIn);
     }
@@ -17,6 +18,7 @@ public class FakeServerPlayNetworkHandler extends ServerPlayNetworkHandler {
 
     @Override
     public void disconnect(Text message) {}
+    */
 }
 
 

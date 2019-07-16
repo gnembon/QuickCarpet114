@@ -26,6 +26,7 @@ public abstract class ClientWorldMixin extends World {
         super(properties, dimensionType, biFunction_1, profiler, boolean_1);
     }
 
+    /*
     @Feature("tickSpeed")
     @Inject(method = "tick", at = @At("HEAD"), cancellable = true)
     private void tickFreeze(BooleanSupplier shouldContinueTicking, CallbackInfo ci) {
@@ -40,4 +41,5 @@ public abstract class ClientWorldMixin extends World {
         }
         return clientChunkManager.shouldTickEntity(entity);
     }
+    */
 }

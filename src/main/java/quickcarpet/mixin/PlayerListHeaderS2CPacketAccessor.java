@@ -9,9 +9,11 @@ import quickcarpet.annotation.Feature;
 @Feature("logger.hud")
 @Mixin(PlayerListHeaderS2CPacket.class)
 public interface PlayerListHeaderS2CPacketAccessor {
+    /*
     @Accessor("header")
     void setHeader(Text header);
 
     @Accessor("footer")
     void setFooter(Text footer);
+    */
 }

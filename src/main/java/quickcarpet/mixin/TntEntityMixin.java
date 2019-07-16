@@ -27,15 +27,16 @@ public abstract class TntEntityMixin extends Entity {
 
     @Inject(method = "<init>(Lnet/minecraft/world/World;DDDLnet/minecraft/entity/LivingEntity;)V", at = @At("RETURN"))
     private void onInit(World world, double x, double y, double z, LivingEntity activator, CallbackInfo ci) {
-        if (!Settings.tntPrimeMomentum) {
+        /*if (!Settings.tntPrimeMomentum) {
             setVelocity(0, 0.2, 0);
-        } else if (Settings.tntHardcodeAngle >= 0) {
+        } else */if (Settings.tntHardcodeAngle >= 0) {
             double rad = -Math.toRadians(Settings.tntHardcodeAngle);
             setVelocity(Math.sin(rad) * 0.02, 0.2, Math.cos(rad) * 0.02);
         }
-        if (Loggers.TNT.isActive()) logHelper = new TNTLogHelper((TntEntity) (Object) this);
+        //if (Loggers.TNT.isActive()) logHelper = new TNTLogHelper((TntEntity) (Object) this);
     }
 
+    /*
     @Inject(method = "explode", at = @At(value = "HEAD"))
     private void onExplode(CallbackInfo ci) {
         if (logHelper != null) {
@@ -43,4 +44,5 @@ public abstract class TntEntityMixin extends Entity {
             logHelper = null;
         }
     }
+    */
 }

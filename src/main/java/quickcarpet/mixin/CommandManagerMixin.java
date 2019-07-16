@@ -22,7 +22,8 @@ public abstract class CommandManagerMixin {
 
     @Shadow @Final private CommandDispatcher<ServerCommandSource> dispatcher;
 
-    @Feature("core")
+
+    /*@Feature("core")
     @Inject(method = "<init>", at = @At("RETURN"))
     private void onRegister(boolean boolean_1, CallbackInfo ci) {
         QuickCarpet.getInstance().setCommandDispatcher(this.dispatcher);
@@ -32,7 +33,7 @@ public abstract class CommandManagerMixin {
     @Redirect(method = "execute", at = @At(value = "INVOKE", target = "Lorg/apache/logging/log4j/Logger;isDebugEnabled()Z"))
     private boolean moreStackTraces(Logger logger) {
         return logger.isDebugEnabled() || QuickCarpet.isDevelopment();
-    }
+    }*/
 
     @Feature(value = "core", bug = @BugFix(value = "MC-124493", status = "WAI"))
     @Inject(method = "execute", at = @At(value = "INVOKE", target = "Lorg/apache/logging/log4j/Logger;isDebugEnabled()Z"), locals = LocalCapture.CAPTURE_FAILHARD)

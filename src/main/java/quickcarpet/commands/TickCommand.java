@@ -23,6 +23,7 @@ import static net.minecraft.server.command.CommandSource.suggestMatching;
 
 public class TickCommand {
 
+    /*
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher) {
         LiteralArgumentBuilder<ServerCommandSource> tick = literal("tick")
             .requires((player) -> Settings.commandTick)
@@ -133,5 +134,5 @@ public class TickCommand {
                 String.format("c %.3f", stats.percentile95), "g , ",
                 String.format("c %.3f", stats.percentile99)
                 );
-    }
+    }*/
 }

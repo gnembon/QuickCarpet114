@@ -19,7 +19,8 @@ import net.minecraft.world.dimension.DimensionType;
 import quickcarpet.utils.ActionPackOwner;
 import quickcarpet.utils.Messenger;
 
-public class FakeServerPlayerEntity extends ServerPlayerEntity {
+public class FakeServerPlayerEntity { //extends ServerPlayerEntity {
+    /*
     private boolean hasStartingPos;
     private double startingX, startingY, startingZ;
     private float startingYaw, startingPitch;
@@ -126,4 +127,5 @@ public class FakeServerPlayerEntity extends ServerPlayerEntity {
         setHealth(20);
         kill();
     }
+    */
 }
